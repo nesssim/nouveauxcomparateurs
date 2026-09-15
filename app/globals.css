@@ -1,0 +1,162 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-primary-50: #f0f7ff;
+  --color-primary-100: #e0efff;
+  --color-primary-200: #b9dfff;
+  --color-primary-300: #7cc4ff;
+  --color-primary-400: #36a5ff;
+  --color-primary-500: #0c87f0;
+  --color-primary-600: #006bcd;
+  --color-primary-700: #0055a6;
+  --color-primary-800: #004889;
+  --color-primary-900: #003d71;
+  --color-primary-950: #00264b;
+
+  --color-accent-50: #fefce8;
+  --color-accent-100: #fef9c3;
+  --color-accent-200: #fef08a;
+  --color-accent-300: #fde047;
+  --color-accent-400: #facc15;
+  --color-accent-500: #eab308;
+  --color-accent-600: #ca8a04;
+  --color-accent-700: #a16207;
+  --color-accent-800: #854d0e;
+  --color-accent-900: #713f12;
+
+  --color-neutral-50: #fafafa;
+  --color-neutral-100: #f5f5f5;
+  --color-neutral-200: #e5e5e5;
+  --color-neutral-300: #d4d4d4;
+  --color-neutral-400: #a3a3a3;
+  --color-neutral-500: #737373;
+  --color-neutral-600: #525252;
+  --color-neutral-700: #404040;
+  --color-neutral-800: #262626;
+  --color-neutral-900: #171717;
+
+  --font-sans: var(--font-nunito-sans);
+  --font-display: var(--font-quicksand);
+
+  --animate-fade-in-up: fade-in-up 0.6s ease-out forwards;
+  --animate-scroll-left: scroll-left 36s linear infinite;
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-pulse-soft: pulse-soft 3s ease-in-out infinite;
+
+  @keyframes fade-in-up {
+    0% {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes scroll-left {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  @keyframes pulse-soft {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.7;
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background: #ffffff;
+  color: #171717;
+}
+
+/* Scroll reveal — visible by default, hidden only when JS initializes */
+.scroll-reveal {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* JS sets data-reveal="pending" to hide, "done" to show */
+.scroll-reveal[data-reveal="pending"] {
+  opacity: 0;
+  transform: translateY(24px);
+}
+
+.scroll-reveal[data-reveal="done"] {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Image treatment */
+img {
+  outline: 1px solid rgba(0, 0, 0, 0.06);
+  outline-offset: -1px;
+}
+
+/* Focus ring */
+*:focus-visible {
+  outline: 2px solid var(--color-primary-500);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Tabular nums for stats */
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Gradient text */
+.gradient-text {
+  background: linear-gradient(135deg, var(--color-primary-600), var(--color-primary-400));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Glass effect */
+.glass {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* Subtle grid pattern */
+.pattern-dots {
+  background-image: radial-gradient(circle, var(--color-primary-200) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
