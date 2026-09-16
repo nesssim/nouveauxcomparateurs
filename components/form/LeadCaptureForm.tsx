@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, type FormEvent } from "react";
+import { Clock } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { LoadingSpinner } from "@/components/ui/LoadingSpinner";
 
@@ -14,7 +15,8 @@ export function LeadCaptureForm() {
     telephone: "",
     email: "",
     codePostal: "",
-    quand: "bientot",
+    quand: "matin",
+    consent: true,
   });
 
   const handleSubmit = async (e: FormEvent) => {
@@ -147,9 +149,9 @@ export function LeadCaptureForm() {
           onChange={(e) => setFormData({ ...formData, quand: e.target.value })}
           className="w-full px-4 py-3 rounded-lg border border-neutral-300 focus:border-primary-500 focus:ring-2 focus:ring-primary-200 outline-none transition-all min-h-[48px]"
         >
-          <option value="bientot">Bientôt</option>
-          <option value="cette-semaine">Cette semaine</option>
-          <option value="ce-mois-ci">Ce mois-ci</option>
+          <option value="matin">Matin (9h-12h)</option>
+          <option value="apres-midi">Après-midi (14h-17h)</option>
+          <option value="fin-journee">Fin de journée (17h-19h)</option>
         </select>
       </div>
 
@@ -158,15 +160,24 @@ export function LeadCaptureForm() {
           id="consent"
           type="checkbox"
           required
+          checked={formData.consent}
+          onChange={(e) => setFormData({ ...formData, consent: e.target.checked })}
           className="mt-1 w-5 h-5 rounded border-neutral-300 text-primary-600 focus:ring-primary-200"
         />
         <label htmlFor="consent" className="text-sm text-neutral-600">
-          J&apos;accepte que mes données soient traitées conformément à la{" "}
+          J&apos;accepte d&apos;être contacté(e) pour une étude personnalisée conformément à la{" "}
           <a href="/cgu" className="underline hover:text-primary-600">
             politique de confidentialité
           </a>
           .
         </label>
+      </div>
+
+      <div className="flex items-center gap-3 bg-primary-50 border border-primary-100 rounded-xl px-4 py-3">
+        <Clock className="w-5 h-5 text-primary-600 shrink-0" />
+        <p className="text-sm font-medium text-primary-700">
+          Nous vous recontacterons sous 48h.
+        </p>
       </div>
 
       <div role="alert" aria-live="assertive">

@@ -23,8 +23,13 @@ export function Header() {
       )}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16 md:h-20">
+        <div className="flex items-center justify-between h-16 md:h-20 relative">
           <Logo size="md" />
+
+          {/* Centered company name — mobile/tablet only */}
+          <span className="md:hidden absolute left-1/2 -translate-x-1/2 font-display font-bold text-primary-700 text-sm leading-tight text-center whitespace-nowrap">
+            Les Nouveaux Comparateurs
+          </span>
 
           <nav className="hidden md:flex items-center gap-1" aria-label="Navigation principale">
             {NAV_LINKS.map((link) => (

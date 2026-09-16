@@ -23,7 +23,8 @@ const leadSchema = z.object({
     ),
   email: z.string().email("Email invalide").max(254),
   codePostal: z.string().regex(/^\d{5}$/, "Code postal invalide"),
-  quand: z.enum(["bientot", "cette-semaine", "ce-mois-ci"]).optional(),
+  quand: z.enum(["matin", "apres-midi", "fin-journee"]).optional(),
+  consent: z.literal(true).refine((v) => v === true, { message: "Consentement requis" }),
 });
 
 export async function POST(request: NextRequest) {

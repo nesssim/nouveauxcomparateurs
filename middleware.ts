@@ -18,7 +18,9 @@ export function middleware(request: NextRequest) {
   );
   response.headers.set(
     "Content-Security-Policy",
-    "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.google.com https://maps.googleapis.com; style-src 'self' 'unsafe-inline'; img-src 'self' https://*.tile.openstreetmap.org https://maps.gstatic.com https://*.google.com data:; frame-src https://www.google.com https://maps.google.com; connect-src 'self' https://maps.googleapis.com; font-src 'self';"
+    process.env.NODE_ENV === "development"
+      ? "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.google.com https://maps.googleapis.com; style-src 'self' 'unsafe-inline'; img-src 'self' https://*.tile.openstreetmap.org https://maps.gstatic.com https://*.google.com data:; frame-src https://www.google.com https://maps.google.com; connect-src 'self' https://maps.googleapis.com; font-src 'self';"
+      : "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.google.com https://maps.googleapis.com; style-src 'self' 'unsafe-inline'; img-src 'self' https://*.tile.openstreetmap.org https://maps.gstatic.com https://*.google.com data:; frame-src https://www.google.com https://maps.google.com; connect-src 'self' https://maps.googleapis.com; font-src 'self';"
   );
 
   return response;

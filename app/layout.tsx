@@ -56,7 +56,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="fr" className={`${quicksand.variable} ${nunitoSans.variable}`}>
+    <html lang="fr" className={`${quicksand.variable} ${nunitoSans.variable}`} data-scroll-behavior="smooth">
       <body className="min-h-screen flex flex-col font-sans antialiased">
         <Header />
         <MobileNav />

@@ -30,6 +30,7 @@ export function Logo({ className, size = "md" }: LogoProps) {
           width={size === "sm" ? 32 : size === "md" ? 40 : 48}
           height={size === "sm" ? 32 : size === "md" ? 40 : 48}
           className="object-contain"
+          style={{ width: "auto", height: "auto" }}
           priority
           onError={() => setImgError(true)}
         />
@@ -43,7 +44,7 @@ export function Logo({ className, size = "md" }: LogoProps) {
           NC
         </div>
       )}
-      <span className="hidden sm:block font-display font-bold text-primary-700 text-lg leading-tight">
+      <span className="hidden md:block font-display font-bold text-primary-700 text-lg leading-tight">
         Les Nouveaux<br />Comparateurs
       </span>
     </Link>
