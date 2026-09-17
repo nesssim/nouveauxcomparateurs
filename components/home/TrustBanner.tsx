@@ -14,7 +14,7 @@ const stats = [
   {
     icon: Users,
     label: "Partenaires",
-    value: "40+",
+    value: "+20",
     accent: "from-blue-400 to-blue-600",
   },
   {
@@ -26,7 +26,7 @@ const stats = [
   {
     icon: MapPin,
     label: "Territoire",
-    value: "7 départements",
+    value: "30 départements",
     accent: "from-rose-400 to-rose-600",
   },
 ];

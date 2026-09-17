@@ -19,7 +19,7 @@ const steps = [
   {
     icon: BarChart3,
     title: "Comparaison",
-    description: "Nous comparons les offres de 40+ mutuelles pour vous.",
+    description: "Nous comparons les offres de +20 mutuelles pour vous.",
   },
   {
     icon: FileCheck,
@@ -37,7 +37,7 @@ export default function EconomisezPage() {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <ScrollReveal>
             <h1 className="font-display text-4xl md:text-5xl font-bold mb-4">
-              Économisez jusqu&apos;à 30%
+              Économisez jusqu&apos;à 30% en moyenne
             </h1>
             <p className="text-lg text-white/70 max-w-2xl mx-auto leading-relaxed">
               sur votre mutuelle santé grâce à notre service de comparaison
@@ -76,7 +76,7 @@ export default function EconomisezPage() {
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <ScrollReveal>
             <p className="text-6xl font-display font-bold text-primary-600 mb-4">
-              480€
+              840€
             </p>
             <p className="text-xl text-neutral-700 mb-8">
               d&apos;économies en moyenne par an pour nos clients

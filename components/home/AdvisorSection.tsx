@@ -76,9 +76,9 @@ export function AdvisorSection() {
 
               <div className="space-y-4 mb-8">
                 {[
-                  "Déplacement à domicile gratuit dans un rayon de 50km",
-                  "Explication claire et tranquille des garanties",
-                  "Pas de souscription par internet ou par téléphone",
+                  "Déplacement à domicile gratuit (des conseillers à proximité)",
+                  "Explication claire et précise des garanties",
+                  "Pas de souscription par internet ou par téléphone (un conseiller en face à face)",
                 ].map((item) => (
                   <div key={item} className="flex items-center gap-4 group">
                     <span className="w-8 h-8 rounded-xl bg-primary-100 text-primary-600 flex items-center justify-center shrink-0 group-hover:bg-primary-600 group-hover:text-white transition-colors duration-300">

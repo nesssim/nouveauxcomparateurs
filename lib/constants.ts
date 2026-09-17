@@ -2,7 +2,7 @@ export const SITE = {
   name: "Les Nouveaux Comparateurs",
   slogan: "Courtier d'assurances",
   description:
-    "Courtier en assurances comparateur. Économisez jusqu'à 30% sur votre mutuelle santé. Mutuelles seniors, chiens/chats, obsèques, protection juridique. Hauts-de-France & Normandie.",
+    "Courtier en assurances comparateur. Économisez jusqu'à 30% en moyenne sur votre mutuelle santé. Mutuelles seniors, chiens/chats, obsèques, protection juridique. Hauts-de-France & Normandie.",
   url: "https://lesnouveauxcomparateurs.fr",
   phone: "+33183759325",
   phoneFormatted: "01 83 75 93 25",

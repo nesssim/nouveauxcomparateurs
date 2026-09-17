@@ -48,10 +48,10 @@ function AnimatedNumber({ target, suffix = "" }: { target: number; suffix?: stri
 }
 
 const STATS = [
-  { value: 30, suffix: "%", label: "d'économies", sublabel: "sur votre mutuelle santé" },
-  { value: 480, suffix: "€", label: "économisés", sublabel: "en moyenne par an" },
-  { value: 20, suffix: "€", label: "à partir de", sublabel: "par mois" },
-  { value: 7, suffix: "", label: "départements", sublabel: "couverts en France" },
+  { value: 30, suffix: "%", label: "d'économies en moyenne", sublabel: "sur votre mutuelle santé" },
+  { value: 840, suffix: "€", label: "économisés", sublabel: "en moyenne par an" },
+  { value: 70, suffix: "€", label: "à partir de", sublabel: "par mois" },
+  { value: 30, suffix: "", label: "départements", sublabel: "couverts en France" },
 ];
 
 export function ValueProposition() {
@@ -105,7 +105,7 @@ export function ValueProposition() {
             <ul className="space-y-4">
               {[
                 "Étude comparative approfondie de votre situation",
-                "Sélection parmi 40+ mutuelles partenaires",
+                "Sélection parmi +20 mutuelles partenaires",
                 "Rendez-vous physique à domicile, jamais à distance",
                 "Budget épargné recyclé dans l'économie locale",
               ].map((item) => (

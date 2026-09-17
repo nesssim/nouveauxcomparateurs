@@ -73,9 +73,9 @@ export function ConseillerContent() {
 
                 <div className="space-y-4 mb-8">
                   {[
-                    "Déplacement à domicile gratuit",
-                    "Pas de souscription à distance",
-                    "Explication claire et tranquillement le choix de la mutuelle",
+                    "Déplacement à domicile gratuit (des conseillers à proximité)",
+                    "Pas de souscription par internet ou par téléphone (un conseiller en face à face)",
+                    "Explication claire et précise du choix de la mutuelle",
                     "Étude comparative approfondie",
                   ].map((item) => (
                     <div key={item} className="flex items-center gap-3">
