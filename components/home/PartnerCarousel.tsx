@@ -50,7 +50,7 @@ export function PartnerCarousel() {
             Nos partenaires
           </p>
           <h2 className="text-center font-display text-2xl md:text-3xl font-bold text-neutral-900">
-            Plus de {partners.length} mutuelles à votre service
+            Plus de 20 mutuelles à votre service
           </h2>
         </div>
       </ScrollReveal>
