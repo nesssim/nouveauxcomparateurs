@@ -214,6 +214,7 @@ export function AvisSection() {
                     : "bg-neutral-300 hover:bg-neutral-400 w-1.5"
                 }`}
                 aria-label={`Avis ${i + 1}`}
+                aria-current={i === current ? "true" : undefined}
               />
             ))}
           </div>
