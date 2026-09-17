@@ -76,7 +76,7 @@ export default function EconomisezPage() {
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <ScrollReveal>
             <p className="text-6xl font-display font-bold text-primary-600 mb-4">
-              840€
+              480€
             </p>
             <p className="text-xl text-neutral-700 mb-8">
               d&apos;économies en moyenne par an pour nos clients
